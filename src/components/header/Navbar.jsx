@@ -4,11 +4,6 @@ import logoimg from '/src/assets/logo.jpg'
 import RegisterForm from './RegisterForm';
 import LoginForm from './LoginFrom';
 
-   
-   
-  
- 
-
  const Navbar = () => {
 
  const [showRegister, setShowRegister] = useState (false);
@@ -29,7 +24,7 @@ import LoginForm from './LoginFrom';
       </div>
       <ul
         tabIndex={0}
-        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+        className="menu menu-sm dropdown-content bg-white rounded-box z-1 mt-3 w-52 p-2 shadow">
        {links}
       </ul>
     </div>

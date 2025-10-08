@@ -1,15 +1,19 @@
-import React from 'react';
-import { useNavigate } from "react-router-dom"; // react-router-dom import
 
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
-import bannerImg from '../../assets/div3.jpg';
+import bannerImg from "../../assets/div3.jpg";
+import RegisterForm from "../header/RegisterForm";
+import LoginForm from "../header/LoginFrom";
 
 const Banner = () => {
-  const navigate = useNavigate(); // hook for navigation
+  const navigate = useNavigate();
+  const [showRegister, setShowRegister] = useState(false);
+  const [showLogin, setShowLogin] = useState(false);
 
   const handleImageClick = () => {
-    navigate("/advocates"); // Advocates page route
+    navigate("/advocates");
   };
 
   return (
@@ -35,8 +39,21 @@ const Banner = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.9 }}
         >
-          <button className="btn btn-primary bg-[#008236] px-8">Get Started</button>
-          <button className="btn bg-white  border-1 border-green-500 text-[#008236] px-8">Sign In</button>
+          {/* ✅ Get Started Button -> RegisterForm */}
+          <button
+            className="btn btn-primary bg-[#008236] px-8"
+            onClick={() => setShowRegister(true)}
+          >
+            Get Started
+          </button>
+
+          {/* ✅ Sign In Button -> LoginForm */}
+          <button
+            className="btn bg-white border-1 border-green-500 text-[#008236] px-8"
+            onClick={() => setShowLogin(true)}
+          >
+            Sign In
+          </button>
         </motion.div>
 
         <motion.div
@@ -54,11 +71,11 @@ const Banner = () => {
 
       {/* Right Side - Image Section */}
       <motion.div
-        className="flex-1 flex justify-center mt-8 md:mt-0 cursor-pointer" // cursor-pointer added
+        className="flex-1 flex justify-center mt-8 md:mt-0 cursor-pointer"
         initial={{ opacity: 0, x: 80 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
-        onClick={handleImageClick} // click handler
+        onClick={handleImageClick}
       >
         <img
           src={bannerImg}
@@ -67,7 +84,9 @@ const Banner = () => {
         />
       </motion.div>
 
-      
+      {/* ✅ Show RegisterForm or LoginForm conditionally */}
+      {showRegister && <RegisterForm onClose={() => setShowRegister(false)} />}
+      {showLogin && <LoginForm onClose={() => setShowLogin(false)} />}
     </div>
   );
 };
