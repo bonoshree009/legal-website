@@ -38,11 +38,11 @@ const RegisterForm = ({ onClose }) => {
             <h2 className="text-2xl font-bold mb-6 text-gray-400 text-center">Create Your Account</h2>
 
             <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-              <input type="text" name="fullName" placeholder="Full Name" value={formData.fullName} onChange={handleChange} className="input input-bordered w-full rounded-lg border-gray-300" required />
-              <input type="email" name="email" placeholder="Email Address" value={formData.email} onChange={handleChange} className="input input-bordered w-full rounded-lg border-gray-300" required />
-              <input type="text" name="phone" placeholder="Phone Number" value={formData.phone} onChange={handleChange} className="input input-bordered w-full rounded-lg border-gray-300" required />
-              <input type="password" name="password" placeholder="Password" value={formData.password} onChange={handleChange} className="input input-bordered w-full rounded-lg border-gray-300" required />
-              <select name="role" value={formData.role} onChange={handleChange} className="select select-bordered w-full rounded-lg border-gray-300">
+              <input type="text" name="fullName" placeholder="Full Name" value={formData.fullName} onChange={handleChange} className="input input-bordered w-full rounded-lg bg-white border-gray-300" required />
+              <input type="email" name="email" placeholder="Email Address" value={formData.email} onChange={handleChange} className="input input-bordered w-full rounded-lg bg-white border-gray-300" required />
+              <input type="text" name="phone" placeholder="Phone Number" value={formData.phone} onChange={handleChange} className="input input-bordered w-full rounded-lg  bg-white border-gray-300" required />
+              <input type="password" name="password" placeholder="Password" value={formData.password} onChange={handleChange} className="input input-bordered w-full   bg-white rounded-lg border-gray-300" required />
+              <select name="role" value={formData.role} onChange={handleChange} className="select select-bordered w-full rounded-lg  bg-white border-gray-300">
                 <option>User</option>
                 <option>Advocate</option>
               </select>

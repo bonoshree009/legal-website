@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
+import advImg from '../../assets/Advimg.jpg'
 
 // const SingleAdv = ({ singleadv, onBookAppointment }) => {
 //   return (
@@ -83,7 +85,7 @@ const SingleAdv = ({ singleadv, onBookAppointment }) => {
       )}
 
       <img
-        src={singleadv.image}
+        src={advImg}
         alt={singleadv.name}
         className="w-28 h-28 rounded-full object-cover border-4 border-green-200 mb-4 shadow-sm"
       />

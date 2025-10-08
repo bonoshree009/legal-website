@@ -1,12 +1,19 @@
 import React from 'react';
+import { useNavigate } from "react-router-dom"; // react-router-dom import
+
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
-import bannerImg from '../../assets/div3.jpg'
-
+import bannerImg from '../../assets/div3.jpg';
 
 const Banner = () => {
-    return (
-<div className="flex flex-col md:flex-row items-center justify-between bg-white rounded-xl shadow-md overflow-hidden my-10 p-6 md:p-12">
+  const navigate = useNavigate(); // hook for navigation
+
+  const handleImageClick = () => {
+    navigate("/advocates"); // Advocates page route
+  };
+
+  return (
+    <div className="flex flex-col md:flex-row items-center justify-between bg-white rounded-xl shadow-md overflow-hidden my-10 p-6 md:p-12">
       {/* Left Side - Text Section */}
       <motion.div
         className="flex-1 text-center md:text-left space-y-6"
@@ -14,7 +21,6 @@ const Banner = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, ease: "easeOut" }}
       >
-        
         <h1 className="text-3xl md:text-5xl font-bold text-[#1e293b] leading-snug">
           মিনিটের মধ্যেই খুঁজে নিন <br /> আপনার উপযুক্ত আইনজীবী
         </h1>
@@ -33,7 +39,7 @@ const Banner = () => {
           <button className="btn bg-white  border-1 border-green-500 text-[#008236] px-8">Sign In</button>
         </motion.div>
 
-          <motion.div
+        <motion.div
           className="pt-4 text-sm text-gray-700 flex flex-wrap gap-2 justify-center md:justify-start"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -48,10 +54,11 @@ const Banner = () => {
 
       {/* Right Side - Image Section */}
       <motion.div
-        className="flex-1 flex justify-center mt-8 md:mt-0"
+        className="flex-1 flex justify-center mt-8 md:mt-0 cursor-pointer" // cursor-pointer added
         initial={{ opacity: 0, x: 80 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
+        onClick={handleImageClick} // click handler
       >
         <img
           src={bannerImg}
@@ -59,6 +66,8 @@ const Banner = () => {
           className="w-full max-w-md rounded-xl shadow-lg"
         />
       </motion.div>
+
+      
     </div>
   );
 };
