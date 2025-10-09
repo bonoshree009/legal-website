@@ -24,21 +24,9 @@ const Footer = () => {
                      WhatsApp এ পাঠান </button> </form> </div> </div> </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
     
             {/* Actual Footer */}
-            <div className=" border-2 border-green-500">
+            <div className=" border-y-2 border-green-500">
                 <div className="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-4 gap-8 text-black">
                     {/* Brand */}
                     <div>
@@ -50,9 +38,9 @@ const Footer = () => {
                     <div>
                         <h4 className="font-semibold mb-3">For Clients</h4>
                         <ul className="space-y-2">
-                            <li><a href="#" className="hover:text-white">Find Lawyers</a></li>
-                            <li><a href="#" className="hover:text-white">My Cases</a></li>
-                            <li><a href="#" className="hover:text-white">Legal Blog</a></li>
+                            <li><a href="#" className="hover:text-green-500">Find Lawyers</a></li>
+                            <li><a href="#" className="hover:text-green-500">My Cases</a></li>
+                            <li><a href="#" className="hover:text-green-500">Legal Blog</a></li>
                         </ul>
                     </div>
 
@@ -60,9 +48,9 @@ const Footer = () => {
                     <div>
                         <h4 className="font-semibold mb-3">For Lawyers</h4>
                         <ul className="space-y-2">
-                            <li><a href="#" className="hover:text-white">My Profile</a></li>
-                            <li><a href="#" className="hover:text-white">My Cases</a></li>
-                            <li><a href="#" className="hover:text-white">My Blogs</a></li>
+                            <li><a href="#" className="hover:text-green-500">My Profile</a></li>
+                            <li><a href="#" className="hover:text-green-500">My Cases</a></li>
+                            <li><a href="#" className="hover:text-green-500">My Blogs</a></li>
                         </ul>
                     </div>
 
@@ -70,14 +58,14 @@ const Footer = () => {
                     <div>
                         <h4 className="font-semibold mb-3">Support</h4>
                         <ul className="space-y-2">
-                            <li><a href="#" className="hover:text-white">Contact Us</a></li>
-                            <li><a href="#" className="hover:text-white">FAQ</a></li>
-                            <li><a href="#" className="hover:text-white">Terms of Service</a></li>
+                            <li><a href="#" className="hover:text-green-500">Contact Us</a></li>
+                            <li><a href="#" className="hover:text-green-500">FAQ</a></li>
+                            <li><a href="#" className="hover:text-green-500">Terms of Service</a></li>
                         </ul>
                     </div>
                 </div>
 
-                <div className="border-t border-gray-700 mt-8 pt-4 text-center text-gray-400">
+                <div className="  pt-4 text-center text-gray-400">
                     © 2025 Ukil System. All rights reserved.
                 </div>
             </div>

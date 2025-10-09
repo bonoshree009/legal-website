@@ -4,6 +4,8 @@ import ErrorPage from '../pages/errorpage/ErrorPage';
 import Root from '../pages/root/Root';
 import Home from '../pages/home/Home';
 import AdvocatesPage from '../pages/advocates/Advocatepage';
+import Legalinfo from '../pages/legalinfo/Legalinfo';
+
 
  export const router = createBrowserRouter([
   {
@@ -20,9 +22,14 @@ import AdvocatesPage from '../pages/advocates/Advocatepage';
         },
          {
             path: "/advocates",
-            loader: () => fetch('advocate.json'), // আলাদা loader
+            loader: () => fetch('advocate.json'), 
             Component: AdvocatesPage
         },
+        {
+          path :"/legal insigts",
+          loader: () => fetch('legalinfo.json'), 
+          Component: Legalinfo
+        }
          
     ]
     
