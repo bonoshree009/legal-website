@@ -1,9 +1,6 @@
 import React from "react";
 import SingleAdv from "./SingleAdv";
-// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
-
-
 
 const Advocates = ({ advocatesData, onBookAppointment }) => {
   return (
@@ -18,7 +15,10 @@ const Advocates = ({ advocatesData, onBookAppointment }) => {
           >
             <SingleAdv
               singleadv={singleadv}
-              onBookAppointment={() => onBookAppointment(singleadv)}
+              onBookAppointment={(adv, setBookedCallback) => {
+                // এখানে আমরা AppointmentForm ওপেন করব
+                onBookAppointment(adv, setBookedCallback);
+              }}
             />
           </motion.div>
         ))

@@ -46,12 +46,16 @@ const AdvocatesPage = () => {
   };
 
   const handleAppointmentClose = (booked = false) => {
-    setShowAppointment(false);
-    if (booked) {
-      if (appointmentCallback) appointmentCallback(); // re-enable button
-      toast.success(`Appointment booked with ${selectedAdvocate.name}!`);
-    }
-  };
+  setShowAppointment(false);
+  if (booked) {
+    if (appointmentCallback) appointmentCallback(); // এখন button disable হবে
+    toast.success(`Appointment booked with ${selectedAdvocate.name}!`);
+  } else {
+    // booked না হলে কিছুই হবে না (button enable থাকবে)
+    setAppointmentCallback(null);
+  }
+};
+
 
   return (
     <div className="px-6 md:px-12 py-10 bg-gray-50 min-h-screen">
