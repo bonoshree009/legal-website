@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
-import bannerImg from "../../assets/div3.jpg";
+
 import RegisterForm from "../header/RegisterForm";
 import LoginForm from "../header/LoginFrom";
 
@@ -39,7 +39,7 @@ const Banner = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.9 }}
         >
-          {/* ✅ Get Started Button -> RegisterForm */}
+          {/*Get Started Button -> RegisterForm */}
           <button
             className="btn btn-primary bg-[#008236] px-8"
             onClick={() => setShowRegister(true)}
@@ -47,7 +47,7 @@ const Banner = () => {
             Get Started
           </button>
 
-          {/* ✅ Sign In Button -> LoginForm */}
+          {/*  Sign In Button -> LoginForm */}
           <button
             className="btn bg-white border-1 border-green-500 text-[#008236] px-8"
             onClick={() => setShowLogin(true)}
@@ -78,13 +78,13 @@ const Banner = () => {
         onClick={handleImageClick}
       >
         <img
-          src={bannerImg}
+          src="https://i.ibb.co/21pQgwf5/div3-BGNBT1-M2.jpg"
           alt="Advocate working"
           className="w-full max-w-md rounded-xl shadow-lg"
         />
       </motion.div>
 
-      {/* ✅ Show RegisterForm or LoginForm conditionally */}
+      {/* Show RegisterForm or LoginForm conditionally */}
       {showRegister && <RegisterForm onClose={() => setShowRegister(false)} />}
       {showLogin && <LoginForm onClose={() => setShowLogin(false)} />}
     </div>
