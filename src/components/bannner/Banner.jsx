@@ -70,19 +70,23 @@ const Banner = () => {
       </motion.div>
 
       {/* Right Side - Image Section */}
-      <motion.div
-        className="flex-1 flex justify-center mt-8 md:mt-0 cursor-pointer"
-        initial={{ opacity: 0, x: 80 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1, ease: "easeOut" }}
-        onClick={handleImageClick}
-      >
-        <img
-          src="https://i.ibb.co/21pQgwf5/div3-BGNBT1-M2.jpg"
-          alt="Advocate working"
-          className="w-full max-w-md rounded-xl shadow-lg"
-        />
-      </motion.div>
+    <motion.div
+  className="flex-1 flex justify-center mt-8 md:mt-0 cursor-pointer"
+  initial={{ opacity: 0, x: 80 }}
+  animate={{ opacity: 1, x: 0 }}
+  transition={{ duration: 1, ease: "easeOut" }}
+  onClick={handleImageClick}
+ // whileHover={{ scale: 1.05, boxShadow: "0 10px 20px rgba(0, 130, 54, 0.5)" }}
+  whileTap={{ scale: 0.95 }} // click করলে slight press effect
+>
+  <motion.img
+    src="https://i.ibb.co/21pQgwf5/div3-BGNBT1-M2.jpg"
+    alt="Advocate working"
+    className="w-full max-w-md rounded-xl shadow-lg"
+    animate={{ y: [0, -5, 0] }} // subtle floating effect
+    transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+  />
+</motion.div>
 
       {/* Show RegisterForm or LoginForm conditionally */}
       {showRegister && <RegisterForm onClose={() => setShowRegister(false)} />}
