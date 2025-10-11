@@ -1,5 +1,6 @@
 import React from "react";
 import SingleAdv from "./SingleAdv";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 
 const Advocates = ({ advocatesData, onBookAppointment }) => {
@@ -29,6 +30,7 @@ const Advocates = ({ advocatesData, onBookAppointment }) => {
       )}
     </>
   );
+  
 };
 
 export default Advocates;
