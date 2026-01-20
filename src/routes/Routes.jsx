@@ -5,6 +5,7 @@ import Root from '../pages/root/Root';
 import Home from '../pages/home/Home';
 import AdvocatesPage from '../pages/advocates/Advocatepage';
 import Legalinfo from '../pages/legalinfo/Legalinfo';
+import Branches from '../pages/Branchs/Branches';
 
 
  export const router = createBrowserRouter([
@@ -29,7 +30,14 @@ import Legalinfo from '../pages/legalinfo/Legalinfo';
           path :"/legal insigts",
           loader: () => fetch('legalinfo.json'), 
           Component: Legalinfo
-        }
+        },
+        {
+          
+          path : "/branch",
+          loader: () => fetch('division.json'), 
+          Component: Branches
+        },
+        
          
     ]
     
