@@ -12,7 +12,7 @@ import LoginForm from './LoginFrom';
 <Link to='/'><li className='m-2  text-gray-700 hover:text-green-600'>Home</li></Link>
 <Link to="/advocates"> <li className=" m-2 text-gray-700 hover:text-green-600">Advocates </li> </Link>
 <Link to='/legal insigts'><li  className='m-2 text-gray-700 hover:text-green-600'>legal insigts</li></Link>
-<Link to='/branch'><li className='m-2 text-gray-700 hover:text-green-600'>Our Branchs</li></Link>
+<Link to='/branch'><li className='m-2 text-gray-700 hover:text-green-600'>Our Branches</li></Link>
 
 
  </>
