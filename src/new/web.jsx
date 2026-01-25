@@ -33,4 +33,4 @@ const AiChat = () => {
         ))}
       </div>
 
-      <di
+      <div></div>

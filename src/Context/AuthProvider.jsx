@@ -19,25 +19,24 @@ const AuthProvider = ({children}) => {
         return signOut(auth)
     }
 
-    
     const signIn =(email,pass)=>{
         setloding(true)
     return signInWithEmailAndPassword(auth,email,pass)
-    }
+     }
 
      const updateuser = (updateddata) =>{
         return updateProfile(auth.currentUser,updateddata)
      }
+
     useEffect(()=>{
     const unsubscribe = onAuthStateChanged(auth,(currentuser)=>{
-    setuser(currentuser)
-    setloding(false)
-});
-return ()=> unsubscribe()
+         setuser(currentuser)
+         setloding(false)
+         });
+
+      return ()=> unsubscribe()
 
     },[])
-
-
 
     const authdata ={
         user,
